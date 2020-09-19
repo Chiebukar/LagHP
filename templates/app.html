@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<!doctype html>
+<html lang="en">
+  <head>
+	<script src="https://use.fontawesome.com/9c99f9dcb1.js"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href= "{{ url_for('static',filename='app.css') }}">
+	
+
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<title>Lagos Home Price Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{{url_for('static', filename = 'app.js')}}"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+	
+  </head>
+  <body>
+		<div class="site-header">
+			<header>
+				<h1>Laghp</h1>
+				<p class="caption">Want to get a great deal for your choice apartment in Lagos?</p>
+			</header>
+			<div class="cover"></div>
+		</div>
+		
+		<div class="container-fluid">
+
+		<p class="display-4 text">Select your preferences and we will tell you the possible price range, simple huh?</p>
+		<section class="form-area">
+		<form class="form">
+			<h2>Bedrooms</h2>
+			<div class="switch-field">
+				<input type="radio" id="radio-bedrooms-1" name="uiBedrooms" value="1"/>
+				<label for="radio-bedrooms-1">1</label>
+				<input type="radio" id="radio-bedrooms-2" name="uiBedrooms" value="2" checked/>
+				<label for="radio-bedrooms-2">2</label>
+				<input type="radio" id="radio-bedrooms-3" name="uiBedrooms" value="3"/>
+				<label for="radio-bedrooms-3">3</label>
+				<input type="radio" id="radio-bedrooms-4" name="uiBedrooms" value="4"/>
+				<label for="radio-bedrooms-4">4</label>
+				<input type="radio" id="radio-bedrooms-5" name="uiBedrooms" value="5"/>
+				<label for="radio-bedrooms-5">5</label>
+			</div>
+			<h2>Bathrooms</h2>
+			<div class="switch-field">
+				<input type="radio" id="radio-bath-1" name="uiBathrooms" value="1"/>
+				<label for="radio-bath-1">1</label>
+				<input type="radio" id="radio-bath-2" name="uiBathrooms" value="2" checked/>
+				<label for="radio-bath-2">2</label>
+				<input type="radio" id="radio-bath-3" name="uiBathrooms" value="3"/>
+				<label for="radio-bath-3">3</label>
+				<input type="radio" id="radio-bath-4" name="uiBathrooms" value="4"/>
+				<label for="radio-bath-4">4</label>
+				<input type="radio" id="radio-bath-5" name="uiBathrooms" value="5"/>
+				<label for="radio-bath-5">5</label>
+			</div>
+			<h2>Toilets</h2>
+			<div class="switch-field">
+				<input type="radio" id="radio-toilet-1" name="uiToilets" value="1"/>
+				<label for="radio-toilet-1">1</label>
+				<input type="radio" id="radio-toilet-2" name="uiToilets" value="2" checked/>
+				<label for="radio-toilet-2">2</label>
+				<input type="radio" id="radio-toilet-3" name="uiToilets" value="3"/>
+				<label for="radio-toilet-3">3</label>
+				<input type="radio" id="radio-toilet-4" name="uiToilets" value="4"/>
+				<label for="radio-toilet-4">4</label>
+				<input type="radio" id="radio-toilet-5" name="uiToilets" value="5"/>
+				<label for="radio-toilet-5">5</label>
+			</div>
+				<h2>Location</h
+					2>
+			<div>
+		<select class="location" name="" id="uiLocations">
+			<option value="" disabled="disabled" selected="selected">Choose a Location</option>
+				<option>Lekki</option>
+				<option>Ikeja</option>
+		</select>
+		</div>
+			<button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
+			<div id="uiEstimatedPrice" class="result">	<h2 class="result-h2"></h2> </div>
+		</form>
+	<section>
+	</div>
+	<footer>
+		<div class="footer-wrapper">
+			<div class="links">
+				<div class="link-div">
+					<a class="link-anchor" href="https://github.com/Chiebukar"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+					<p>github</p>
+				</div>
+				<div class="link-div">
+					<a class="link-anchor" href="https://www.linkedin.com/in/samuel-ozechi-b9b1781b6/"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+					<p>LinkedIn</p>
+				</div>
+			</div>
+			<hr />
+			<p class="creator">Created by Samuel Ozechi</p>
+		</div>
+	</footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
