@@ -62,7 +62,7 @@ function onClickedEstimatePrice() {
         a = Math.round(value/100000)*100000
         b = a - 50000
         c = a + 50000
-        estPrice.innerHTML = "<h2> Between #" + b.toLocaleString() + ' - #' + c.toLocaleString() + " Naira</h2>";
+        estPrice.innerHTML = "<h2> Between ₦" + b.toLocaleString() + ' - ₦' + c.toLocaleString() + "</h2>";
       console.log(status);
       })
     }
