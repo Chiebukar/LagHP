@@ -68,6 +68,6 @@ def predict_home_price():
     return response
 
 
-if __name__ == '__main__':
-    print('Starting python flask server')
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     print('Starting python flask server')
+#     app.run(debug=True)
